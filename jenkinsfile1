@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        label "docker1"
+        node {
+           label "docker1"
+           customWorkspace "/home/jenkins/custom"
+        }
     }
     stages{
         stage("build"){
