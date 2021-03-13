@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  
+  stages {
+      stage ('build') {
+          optiones {
+              timeout(time: 1, unit: 'SECONDS')
+          }
+          steps {
+              echo 'Hola Cris'
+              sleep 2
+          }
+      }
+  }
+}
