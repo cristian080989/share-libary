@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('build') {
             when{
-                changelog '.*some_text.*'
+                changelog '.*normal.txt.*'
             }
             steps{
                 echo "Hola logs"
