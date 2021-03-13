@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage ('build'){
+            options {
+                timestamps()
+            }
+            steps{
+                echo "Hola Build"
+                echo "Hola Build Again"
+            }
+        }
+        stage ('test'){
+            steps{
+                echo "Hola Test"
+                echo "Hola Test Again"
+            }
+        }
+    }
+}
