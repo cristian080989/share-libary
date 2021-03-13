@@ -3,7 +3,7 @@ pipeline {
   
   stages {
       stage('build') {
-          optiones {
+          options {
               timeout(time: 1, unit: 'SECONDS')
           }
           steps {
