@@ -16,7 +16,7 @@ pipeline {
             }
             
             steps{
-                echo "building  ${version}"
+                echo "building allOf  ${version}   ${some_name}"
             }
         }
     }
