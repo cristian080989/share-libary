@@ -5,9 +5,11 @@ pipeline{
         stage('Build main'){
             when{
                 branch 'main'
+                
             }
             steps {
                 echo 'Building main'
+                echo 'Hola cris'
             }
         }
         stage('Build Dev'){
