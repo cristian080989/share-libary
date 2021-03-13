@@ -4,10 +4,10 @@ pipeline {
     stages{
         stage('build') {
             when{
-                changelog '.*nomal.txt.*'
+                changelog '.*some_text.*'
             }
             steps{
-            echo "Hola logs"
+                echo "Hola logs"
             }
         }
     }
