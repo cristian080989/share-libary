@@ -17,5 +17,12 @@ pipeline {
                 echo "name3 ${name3}"
             }
         }
+        
+        stage ('Test') {
+            steps {
+                   echo "name1 ${name1}"
+                   echo "name2 ${name2}"
+            }
+        }
     }
 }
