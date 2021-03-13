@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    environment {
+        some_name = 'dev'
+    }
+    
+    stages {
+        stage('build'){
+            when {
+                not {
+                    equals expected: "dev", actual: some_name
+                }
+            }
+            steps{
+                echo "${some_name}"
+            }
+        }
+    }
+}
