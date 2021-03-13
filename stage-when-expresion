@@ -13,7 +13,7 @@ pipeline {
                 }
             }
             steps{
-                echo "building${version}"
+                echo "building  ${version}"
             }
         }
     }
