@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    
+    enviroment {
+        name1 = "Dev"
+        name2 = "Cert"
+    }
+    
+    stages {
+        stage ('build') {
+            enviroment {
+                name3 = "Prod"
+            }
+            steps {
+                echo "name1 ${name1}"
+                echo "name2 ${name2}"
+                echo "name3 ${name3}"
+            }
+        }
+    }
+}
