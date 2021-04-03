@@ -1,0 +1,24 @@
+pipeline{
+    agent{
+        node{
+            label "docker_maven"
+        }
+    }
+    
+    stages{
+        stage('build'){
+            steps{
+                script{
+                    def name = "Jeff"
+                    if(name == "Jeff")
+                        println("Hola ${name}")
+                    else
+                        println("Hola cris")
+                        
+                    sleep 2
+                    echo "fin script"
+                }
+            }
+        }
+    }
+}
