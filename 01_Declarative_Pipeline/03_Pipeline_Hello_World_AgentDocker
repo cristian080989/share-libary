@@ -1,0 +1,12 @@
+pipeline{
+    agent{
+        label "docker_maven"
+    }
+    stages{
+        stage('build'){
+            steps{
+                echo 'Hello World'
+            }
+        }
+    }
+}
