@@ -14,7 +14,7 @@ pipeline {
                     steps {
                         echo "Stages2 executing"
                         sleep 2
-                        echo "error"
+                        echo 'error'
                     }
                 }
                 stage ('Stage3') {
