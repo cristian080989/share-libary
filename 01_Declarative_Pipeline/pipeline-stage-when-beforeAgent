@@ -1,0 +1,21 @@
+pipeline {
+    agent none
+    environment {
+        DEPLOY_TO='dev'
+    }
+    stages {
+        stage('Build') {
+            agent {
+                label "Docker_maven"
+            }
+            when {
+                beforeAgent false
+                environment name: 'DEPLOY_TO', value: 'production'
+            } 
+            steps {
+                echo 'Building'
+            }
+        }
+    }
+}
+
