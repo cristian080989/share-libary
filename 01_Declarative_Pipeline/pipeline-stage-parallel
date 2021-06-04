@@ -13,7 +13,8 @@ pipeline {
                 stage ('Stage2'){
                     steps {
                         echo "Stages2 executing"
-                        sleep 10
+                        sleep 2
+                        echo "error"
                     }
                 }
                 stage ('Stage3') {
